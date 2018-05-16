@@ -1,0 +1,28 @@
+
+<%= simple_form_for(@questionnaire) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :dob, label: 'Date of Birth' %>
+    <%= f.input :q1, label: 'Cual es tu motivo principal para acudir a la terapia nutricional?', Hint: 'narcisismo, auto-odio etc.'  %>
+    <%= f.input :q2, label: 'Como te has enterado de la terapia nutricional?' %>
+    <%= f.input :q3, label: 'Has acudido a otro especialista por las síntomas actuales?' %>
+
+    <%= f.input :q4, label: 'Have you ever felt like committing suicide?', hint: 'Go on, do it!', as: :string %>
+    <%= f.input :q5, as: :string %>
+    <%= f.input :q6, as: :string %>
+
+    <%= f.input :q7, label: 'sexo', as: :radio_buttons, collection: [['0', 'female'], ['1', 'male'], ['2', 'transginger']], label_method: :second, value_method: :first %>
+    <%= f.input :q8, label: 'Daddy touched me when I was small' %>
+    <%= f.input :q9, label: 'Yes, I am a whore' %>
+    <%= f.input :q10, label: 'Lies I regularly tell myself', hint: 'select all that apply', collection: [['I am loveable', '0'], ['I am a virgin', '1'], ['I am a strong independent woman', '2'], ['I love life', '3'], ['A man should want me no matter what my past', '4'], ['I have self-worth beyond my looks', '5'], ['I didnt eat the last slice of cheesecake', '6'], ['I am not a 2-faced coniving whore', '7'], ['I am a victim of the patriarchy', '8']], as: :check_boxes %>
+    <%= f.input :q11, label: 'Number of "boyfriends"', collection: 1..10, as: :radio_buttons %>
+    <%= f.input :q12, label: 'Actual cock carousel count', collection: 50..1000%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
