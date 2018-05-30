@@ -1,0 +1,309 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Formularios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha</th>
+      <th>Fdn</th>
+      <th>Direccion</th>
+      <th>Sexo</th>
+      <th>Email</th>
+      <th>Telefono</th>
+      <th>Movil</th>
+      <th>Profesion</th>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Motivos</th>
+      <th>Especialistas</th>
+      <th>Dieta</th>
+      <th>Intolerancia</th>
+      <th>Detalles 1</th>
+      <th>Limites</th>
+      <th>Otro 1</th>
+      <th>Problema1</th>
+      <th>P1</th>
+      <th>P2</th>
+      <th>P3</th>
+      <th>Problema2</th>
+      <th>P4</th>
+      <th>P5</th>
+      <th>P6</th>
+      <th>Problema3</th>
+      <th>P7</th>
+      <th>P8</th>
+      <th>P9</th>
+      <th>Problema4</th>
+      <th>P10</th>
+      <th>P11</th>
+      <th>P12</th>
+      <th>Otro 2</th>
+      <th>Medicacion1</th>
+      <th>M1</th>
+      <th>M2</th>
+      <th>M3</th>
+      <th>M4</th>
+      <th>M5</th>
+      <th>M6</th>
+      <th>Medicacion2</th>
+      <th>M7</th>
+      <th>M8</th>
+      <th>M9</th>
+      <th>M10</th>
+      <th>M11</th>
+      <th>M12</th>
+      <th>Medicacion3</th>
+      <th>M13</th>
+      <th>M14</th>
+      <th>M15</th>
+      <th>M16</th>
+      <th>M17</th>
+      <th>M18</th>
+      <th>Otro 3</th>
+      <th>Suplemento1</th>
+      <th>S1</th>
+      <th>S2</th>
+      <th>S3</th>
+      <th>S4</th>
+      <th>Suplemento2</th>
+      <th>S5</th>
+      <th>S6</th>
+      <th>S7</th>
+      <th>S8</th>
+      <th>Suplemento3</th>
+      <th>S9</th>
+      <th>S10</th>
+      <th>S11</th>
+      <th>S12</th>
+      <th>Otro 4</th>
+      <th>Madre</th>
+      <th>Padre</th>
+      <th>Abuela mat</th>
+      <th>Abuela pat</th>
+      <th>Abuelo mat</th>
+      <th>Abuelo pat</th>
+      <th>Hermanos</th>
+      <th>Hermanas</th>
+      <th>Tios</th>
+      <th>Tias</th>
+      <th>Ninos</th>
+      <th>Sobrinos</th>
+      <th>Activa</th>
+      <th>Ejercicio1</th>
+      <th>E1</th>
+      <th>E2</th>
+      <th>Ejercicio2</th>
+      <th>E3</th>
+      <th>E4</th>
+      <th>Ejercicio3</th>
+      <th>E5</th>
+      <th>E6</th>
+      <th>Otro 5</th>
+      <th>Fumas1</th>
+      <th>Fumas2</th>
+      <th>Fumado</th>
+      <th>Alcol1</th>
+      <th>Alcol2</th>
+      <th>Alergia1</th>
+      <th>Alergia2</th>
+      <th>Habitos1</th>
+      <th>Habitos2</th>
+      <th>Habitos3</th>
+      <th>Habitos4</th>
+      <th>Galletas tartas bolleria</th>
+      <th>Leche</th>
+      <th>Huevos</th>
+      <th>Chocolates dulces</th>
+      <th>Carne roja</th>
+      <th>Carne blanca</th>
+      <th>Pescado blanco</th>
+      <th>Pezcado azul</th>
+      <th>Carne procesada</th>
+      <th>Pan</th>
+      <th>Te</th>
+      <th>Cafe</th>
+      <th>Refresco lata</th>
+      <th>Agua</th>
+      <th>Verdura</th>
+      <th>Ensalada</th>
+      <th>Tick</th>
+      <th>Pecho</th>
+      <th>Dieta sana</th>
+      <th>Motivacion</th>
+      <th>Desayuno1</th>
+      <th>Desayuno2</th>
+      <th>Desayuno3</th>
+      <th>Almuerzo</th>
+      <th>Almuerzo2</th>
+      <th>Almuerzo3</th>
+      <th>Cena1</th>
+      <th>Cena2</th>
+      <th>Cena3</th>
+      <th>Snacks1</th>
+      <th>Snacks2</th>
+      <th>Snacks3</th>
+      <th>Bebidas1</th>
+      <th>Bebidas2</th>
+      <th>Bebidas3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @formularios.each do |formulario| %>
+      <tr>
+        <td><%= formulario.nombre %></td>
+        <td><%= formulario.fecha %></td>
+        <td><%= formulario.FdN %></td>
+        <td><%= formulario.direccion %></td>
+        <td><%= formulario.sexo %></td>
+        <td><%= formulario.email %></td>
+        <td><%= formulario.telefono %></td>
+        <td><%= formulario.movil %></td>
+        <td><%= formulario.profesion %></td>
+        <td><%= formulario.altura %></td>
+        <td><%= formulario.peso %></td>
+        <td><%= formulario.motivos %></td>
+        <td><%= formulario.especialistas %></td>
+        <td><%= formulario.dieta %></td>
+        <td><%= formulario.intolerancia %></td>
+        <td><%= formulario.detalles_1 %></td>
+        <td><%= formulario.limites %></td>
+        <td><%= formulario.otro_1 %></td>
+        <td><%= formulario.problema1 %></td>
+        <td><%= formulario.p1 %></td>
+        <td><%= formulario.p2 %></td>
+        <td><%= formulario.p3 %></td>
+        <td><%= formulario.problema2 %></td>
+        <td><%= formulario.p4 %></td>
+        <td><%= formulario.p5 %></td>
+        <td><%= formulario.p6 %></td>
+        <td><%= formulario.problema3 %></td>
+        <td><%= formulario.p7 %></td>
+        <td><%= formulario.p8 %></td>
+        <td><%= formulario.p9 %></td>
+        <td><%= formulario.problema4 %></td>
+        <td><%= formulario.p10 %></td>
+        <td><%= formulario.p11 %></td>
+        <td><%= formulario.p12 %></td>
+        <td><%= formulario.otro_2 %></td>
+        <td><%= formulario.medicacion1 %></td>
+        <td><%= formulario.m1 %></td>
+        <td><%= formulario.m2 %></td>
+        <td><%= formulario.m3 %></td>
+        <td><%= formulario.m4 %></td>
+        <td><%= formulario.m5 %></td>
+        <td><%= formulario.m6 %></td>
+        <td><%= formulario.medicacion2 %></td>
+        <td><%= formulario.m7 %></td>
+        <td><%= formulario.m8 %></td>
+        <td><%= formulario.m9 %></td>
+        <td><%= formulario.m10 %></td>
+        <td><%= formulario.m11 %></td>
+        <td><%= formulario.m12 %></td>
+        <td><%= formulario.medicacion3 %></td>
+        <td><%= formulario.m13 %></td>
+        <td><%= formulario.m14 %></td>
+        <td><%= formulario.m15 %></td>
+        <td><%= formulario.m16 %></td>
+        <td><%= formulario.m17 %></td>
+        <td><%= formulario.m18 %></td>
+        <td><%= formulario.otro_3 %></td>
+        <td><%= formulario.suplemento1 %></td>
+        <td><%= formulario.s1 %></td>
+        <td><%= formulario.s2 %></td>
+        <td><%= formulario.s3 %></td>
+        <td><%= formulario.s4 %></td>
+        <td><%= formulario.suplemento2 %></td>
+        <td><%= formulario.s5 %></td>
+        <td><%= formulario.s6 %></td>
+        <td><%= formulario.s7 %></td>
+        <td><%= formulario.s8 %></td>
+        <td><%= formulario.suplemento3 %></td>
+        <td><%= formulario.s9 %></td>
+        <td><%= formulario.s10 %></td>
+        <td><%= formulario.s11 %></td>
+        <td><%= formulario.s12 %></td>
+        <td><%= formulario.otro_4 %></td>
+        <td><%= formulario.madre %></td>
+        <td><%= formulario.padre %></td>
+        <td><%= formulario.abuela_mat %></td>
+        <td><%= formulario.abuela_pat %></td>
+        <td><%= formulario.abuelo_mat %></td>
+        <td><%= formulario.abuelo_pat %></td>
+        <td><%= formulario.hermanos %></td>
+        <td><%= formulario.hermanas %></td>
+        <td><%= formulario.tios %></td>
+        <td><%= formulario.tias %></td>
+        <td><%= formulario.ninos %></td>
+        <td><%= formulario.sobrinos %></td>
+        <td><%= formulario.activa %></td>
+        <td><%= formulario.ejercicio1 %></td>
+        <td><%= formulario.e1 %></td>
+        <td><%= formulario.e2 %></td>
+        <td><%= formulario.ejercicio2 %></td>
+        <td><%= formulario.e3 %></td>
+        <td><%= formulario.e4 %></td>
+        <td><%= formulario.ejercicio3 %></td>
+        <td><%= formulario.e5 %></td>
+        <td><%= formulario.e6 %></td>
+        <td><%= formulario.otro_5 %></td>
+        <td><%= formulario.fumas1 %></td>
+        <td><%= formulario.fumas2 %></td>
+        <td><%= formulario.fumado %></td>
+        <td><%= formulario.alcol1 %></td>
+        <td><%= formulario.alcol2 %></td>
+        <td><%= formulario.alergia1 %></td>
+        <td><%= formulario.alergia2 %></td>
+        <td><%= formulario.habitos1 %></td>
+        <td><%= formulario.habitos2 %></td>
+        <td><%= formulario.habitos3 %></td>
+        <td><%= formulario.habitos4 %></td>
+        <td><%= formulario.galletas_tartas_bolleria %></td>
+        <td><%= formulario.leche %></td>
+        <td><%= formulario.huevos %></td>
+        <td><%= formulario.chocolates_dulces %></td>
+        <td><%= formulario.carne_roja %></td>
+        <td><%= formulario.carne_blanca %></td>
+        <td><%= formulario.pescado_blanco %></td>
+        <td><%= formulario.pezcado_azul %></td>
+        <td><%= formulario.carne_procesada %></td>
+        <td><%= formulario.pan %></td>
+        <td><%= formulario.te %></td>
+        <td><%= formulario.cafe %></td>
+        <td><%= formulario.refresco_lata %></td>
+        <td><%= formulario.agua %></td>
+        <td><%= formulario.verdura %></td>
+        <td><%= formulario.ensalada %></td>
+        <td><%= formulario.tick %></td>
+        <td><%= formulario.pecho %></td>
+        <td><%= formulario.dieta_sana %></td>
+        <td><%= formulario.motivacion %></td>
+        <td><%= formulario.desayuno1 %></td>
+        <td><%= formulario.desayuno2 %></td>
+        <td><%= formulario.desayuno3 %></td>
+        <td><%= formulario.almuerzo %></td>
+        <td><%= formulario.almuerzo2 %></td>
+        <td><%= formulario.almuerzo3 %></td>
+        <td><%= formulario.cena1 %></td>
+        <td><%= formulario.cena2 %></td>
+        <td><%= formulario.cena3 %></td>
+        <td><%= formulario.snacks1 %></td>
+        <td><%= formulario.snacks2 %></td>
+        <td><%= formulario.snacks3 %></td>
+        <td><%= formulario.bebidas1 %></td>
+        <td><%= formulario.bebidas2 %></td>
+        <td><%= formulario.bebidas3 %></td>
+        <td><%= link_to 'Show', formulario %></td>
+        <td><%= link_to 'Edit', edit_formulario_path(formulario) %></td>
+        <td><%= link_to 'Destroy', formulario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Formulario', new_formulario_path %>
