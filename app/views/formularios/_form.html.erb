@@ -5,108 +5,265 @@
 
   <div class="form-inputs">
     <%= f.input :nombre %>
-    <%= f.input :fecha %>
-    <%= f.input :FdN %>
+    <%= f.input :fecha, start_year: Date.today.year %>
+    <%= f.input :FdN, label: 'Fecha de nacimiento', start_year: Date.today.year - 90, end_year: Date.today.year - 18 %>
     <%= f.input :direccion %>
-    <%= f.input :sexo %>
     <%= f.input :email %>
     <%= f.input :telefono %>
     <%= f.input :movil %>
     <%= f.input :profesion %>
-    <%= f.input :altura %>
-    <%= f.input :peso %>
-    <%= f.input :motivos %>
-    <%= f.input :especialistas %>
+
+    <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.input :sexo, as: :radio_buttons, collection: [['0', 'Hombre'], ['1', 'Mujer']], label_method: :second, value_method: :first %></td>
+              <td><%= f.input :altura %></td>
+              <td><%= f.input :peso %></td>
+            </tr>
+          <tbody>
+
+    <%= f.input :motivos, label: '¿Cuales son tus motivos por acudir a Terapia Nutricional?' %>
+    <%= f.input :especialistas, as: :boolean, checked_value: true, unchecked_value: false, label: '¿Has acudido a otros especialistas?' %>
     <%= f.input :dieta %>
-    <%= f.input :intolerancia %>
+    <%= f.input :intolerancia, label: '¿Tienes alguna intolerancia o alergia alimentaria?' %>
     <%= f.input :detalles_1 %>
-    <%= f.input :limites %>
-    <%= f.input :otro_1 %>
-    <%= f.input :problema1 %>
-    <%= f.input :p1 %>
-    <%= f.input :p2 %>
-    <%= f.input :p3 %>
-    <%= f.input :problema2 %>
-    <%= f.input :p4 %>
-    <%= f.input :p5 %>
-    <%= f.input :p6 %>
-    <%= f.input :problema3 %>
-    <%= f.input :p7 %>
-    <%= f.input :p8 %>
-    <%= f.input :p9 %>
-    <%= f.input :problema4 %>
-    <%= f.input :p10 %>
-    <%= f.input :p11 %>
-    <%= f.input :p12 %>
-    <%= f.input :otro_2 %>
-    <%= f.input :medicacion1 %>
-    <%= f.input :m1 %>
-    <%= f.input :m2 %>
-    <%= f.input :m3 %>
-    <%= f.input :m4 %>
-    <%= f.input :m5 %>
-    <%= f.input :m6 %>
-    <%= f.input :medicacion2 %>
-    <%= f.input :m7 %>
-    <%= f.input :m8 %>
-    <%= f.input :m9 %>
-    <%= f.input :m10 %>
-    <%= f.input :m11 %>
-    <%= f.input :m12 %>
-    <%= f.input :medicacion3 %>
-    <%= f.input :m13 %>
-    <%= f.input :m14 %>
-    <%= f.input :m15 %>
-    <%= f.input :m16 %>
-    <%= f.input :m17 %>
-    <%= f.input :m18 %>
-    <%= f.input :otro_3 %>
-    <%= f.input :suplemento1 %>
-    <%= f.input :s1 %>
-    <%= f.input :s2 %>
-    <%= f.input :s3 %>
-    <%= f.input :s4 %>
-    <%= f.input :suplemento2 %>
-    <%= f.input :s5 %>
-    <%= f.input :s6 %>
-    <%= f.input :s7 %>
-    <%= f.input :s8 %>
-    <%= f.input :suplemento3 %>
-    <%= f.input :s9 %>
-    <%= f.input :s10 %>
-    <%= f.input :s11 %>
-    <%= f.input :s12 %>
-    <%= f.input :otro_4 %>
-    <%= f.input :madre %>
-    <%= f.input :padre %>
-    <%= f.input :abuela_mat %>
-    <%= f.input :abuela_pat %>
-    <%= f.input :abuelo_mat %>
-    <%= f.input :abuelo_pat %>
-    <%= f.input :hermanos %>
-    <%= f.input :hermanas %>
-    <%= f.input :tios %>
-    <%= f.input :tias %>
-    <%= f.input :ninos %>
-    <%= f.input :sobrinos %>
-    <%= f.input :activa %>
-    <%= f.input :ejercicio1 %>
-    <%= f.input :e1 %>
-    <%= f.input :e2 %>
-    <%= f.input :ejercicio2 %>
-    <%= f.input :e3 %>
-    <%= f.input :e4 %>
-    <%= f.input :ejercicio3 %>
-    <%= f.input :e5 %>
-    <%= f.input :e6 %>
-    <%= f.input :otro_5 %>
-    <%= f.input :fumas1 %>
-    <%= f.input :fumas2 %>
-    <%= f.input :fumado %>
-    <%= f.input :alcol1 %>
-    <%= f.input :alcol2 %>
-    <%= f.input :alergia1 %>
-    <%= f.input :alergia2 %>
+    <%= f.input :limites, label: '¿Algunos de los siguientes elementos te limitan a la hora de alcanzar tus metas de salud/estilo de vida/ejercicio? ', collection: [ ['Tiempo', '0'], ['Dinero', '1'], ['Entendimiento', '2'], ['Fuerza de voluntad', '3'], ['Apoyo', '4']], as: :check_boxes %>
+    <%= f.input :otro_1, label: 'Otro' %>
+
+    <table class="table">
+          <thead>
+            <tr>
+              <th>Problema de salud/síntoma/cirujía</th>
+              <th>Edad de inicio</th>
+              <th>Duración</th>
+              <th>Medicación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.input :problema1, label: false %></td>
+              <td><%= f.input :p1, label: false %></td>
+              <td><%= f.input :p2, label: false %></td>
+              <td><%= f.input :p3, label: false %></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><%= f.input :problema2, label: false %></td>
+              <td><%= f.input :p4, label: false %></td>
+              <td><%= f.input :p5, label: false %></td>
+              <td><%= f.input :p6, label: false %></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><%= f.input :problema3, label: false %></td>
+              <td><%= f.input :p7, label: false %></td>
+              <td><%= f.input :p8, label: false %></td>
+              <td><%= f.input :p9, label: false %></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td><%= f.input :problema4, label: false %></td>
+              <td><%= f.input :p10, label: false %></td>
+              <td><%= f.input :p11, label: false %></td>
+              <td><%= f.input :p12, label: false %></td>
+              <td></td>
+            </tr>
+          <tbody>
+    </table>
+<%= f.input :otro_2, label: 'Otro' %>
+
+
+    <table class="table">
+          <thead>
+            <tr>
+              <th>Medicación</th>
+              <th>Dosis</th>
+              <th>Condición</th>
+              <th>Frecuencia</th>
+              <th>Duración</th>
+              <th>Actual</th>
+              <th>Pasado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.input :medicacion1, label: false %></td>
+              <td><%= f.input :m1, label: false %></td>
+              <td><%= f.input :m2, label: false %></td>
+              <td><%= f.input :m3, label: false %></td>
+              <td><%= f.input :m4, label: false %></td>
+              <td><%= f.input :m5, label: false %></td>
+              <td><%= f.input :m6, label: false %></td>
+            </tr>
+
+            <tr>
+              <td><%= f.input :medicacion2, label: false %></td>
+              <td><%= f.input :m7, label: false %></td>
+              <td><%= f.input :m8, label: false %></td>
+              <td><%= f.input :m9, label: false %></td>
+              <td><%= f.input :m10, label: false %></td>
+              <td><%= f.input :m11, label: false %></td>
+              <td><%= f.input :m12, label: false %></td>
+            </tr>
+
+            <tr>
+              <td><%= f.input :medicacion3, label: false %></td>
+              <td><%= f.input :m13, label: false %></td>
+              <td><%= f.input :m14, label: false %></td>
+              <td><%= f.input :m15, label: false %></td>
+              <td><%= f.input :m16, label: false %></td>
+              <td><%= f.input :m17, label: false %></td>
+              <td><%= f.input :m18, label: false %></td>
+            </tr>
+          <tbody>
+    </table>
+    <%= f.input :otro_3, label: 'Otro' %>
+
+
+    <table class="table">
+          <thead>
+            <tr>
+              <th>Suplemento
+(incluye el fabricante en el caso que sea posible)
+</th>
+              <th>Dosis</th>
+              <th>Duración</th>
+              <th>Actual</th>
+              <th>Pasado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><%= f.input :suplemento1, label: false %></td>
+              <td><%= f.input :s1, label: false %></td>
+              <td><%= f.input :s2, label: false %></td>
+              <td><%= f.input :s3, label: false %></td>
+              <td><%= f.input :s4, label: false %></td>
+
+            </tr>
+
+            <tr>
+              <td><%= f.input :suplemento2, label: false %></td>
+              <td><%= f.input :s5, label: false %></td>
+              <td><%= f.input :s6, label: false %></td>
+              <td><%= f.input :s7, label: false %></td>
+              <td><%= f.input :s8, label: false %></td>
+            </tr>
+
+            <tr>
+              <td><%= f.input :suplemento3, label: false %></td>
+              <td><%= f.input :s9, label: false %></td>
+              <td><%= f.input :s10, label: false %></td>
+              <td><%= f.input :s11, label: false %></td>
+              <td><%= f.input :s12, label: false %></td>
+            </tr>
+          <tbody>
+    </table>
+    <%= f.input :otro_4, label: 'Otro' %>
+
+  </table>
+  <table class="table">
+        <thead>
+          <tr>
+            <th>Quién</th>
+            <th>Condición</th>
+            <th>Quién</th>
+            <th>Condición</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Madre</td>
+            <td><%= f.input :madre, label: false  %></td>
+            <td>Padre</td>
+            <td><%= f.input :padre, label: false  %></td>
+          </tr>
+          <tr>
+            <td>Abuela materna</td>
+            <td><%= f.input :abuela_mat, label: false  %></td>
+            <td>Abuela paterna</td>
+            <td><%= f.input :abuela_mat, label: false  %></td>
+          </tr>
+          <tr>
+            <td>Abuelo materno</td>
+            <td><%= f.input :abuelo_mat, label: false  %></td>
+            <td>Abuelo paterno</td>
+            <td><%= f.input :abuelo_mat, label: false  %></td>
+          </tr>
+          <tr>
+            <td>Hermanos</td>
+            <td><%= f.input :hermanos, label: false %></td>
+            <td>Hermanas</td>
+            <td><%= f.input :hermanas, label: false %></td>
+          </tr>
+          <tr>
+            <td>Tíos</td>
+            <td><%= f.input :tios, label: false %></td>
+            <td>Tías</td>
+            <td><%= f.input :tias, label: false %></td>
+          </tr>
+          <tr>
+            <td>Niños</td>
+            <td><%= f.input :ninos, label: false %></td>
+            <td>Sobrinos</td>
+            <td><%= f.input :sobrinos, label: false %></td>
+          </tr>
+        <tbody>
+  </table>
+FACTORES-ESTILO DE VIDA
+  <%= f.input :activa, label: 'Te consideras una persona:', collection: [ ['Muy activa  ', '0'], ['Activa', '1'], ['Moderadamente activa', '2'], ['Sedentario', '3']], as: :check_boxes %>
+
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th>Tipo de ejercicio</th>
+          <th>Frecuencia (e.g. 3x p/semana)</th>
+          <th>Duración (e.g. 45 mins)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= f.input :ejercicio1 %></td>
+          <td><%= f.input :e1, label: false %></td>
+          <td><%= f.input :e2, label: false %></td>
+        </tr>
+        <tr>
+          <td><%= f.input :ejercicio2 %></td>
+          <td><%= f.input :e3, label: false %></td>
+          <td><%= f.input :e4, label: false %></td>
+        </tr>
+        <tr>
+          <td><%= f.input :ejercicio3 %></td>
+          <td><%= f.input :e5, label: false %></td>
+          <td><%= f.input :e6, label: false %></td>
+        </tr>
+      <tbody>
+</table>
+    <%= f.input :otro_5, label:'Otro' %>
+
+    <%= f.input :fumas1, label:'Fumas?' %>
+    <%= f.input :fumas2, label:'Si es así, cuantos al dia?' %>
+    <%= f.input :fumado, label: 'Has fumado alguna vez?' %>
+
+Cual es su consumición media de alcohol (unidades)?<br>
+    <%= f.input :alcol1, label: 'Entre semana' %>
+    <%= f.input :alcol2, label: 'Fin de semana' %>
+
+Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en el espacio abajo:
+
+    <%= f.input :alergia1, label: 'Te consideras una persona:', collection: [ ['Historia de alergias en la familia?', '0'], ['Alergia diagnosticada?', '1'], ['Intoleranica diagnosticada?', '2'], ['Has hecho algunas pruebas?', '3'], ['Llevas un EpiPen?', '4'], ['Historia de reacción alergica?', '5']], as: :check_boxes %>
+    <%= f.input :alergia2, label:'Proporciona mas detalles y enumera cualquier alimento o producto químico que te podría provocar una reacción:'%>
     <%= f.input :habitos1 %>
     <%= f.input :habitos2 %>
     <%= f.input :habitos3 %>
@@ -148,6 +305,23 @@
     <%= f.input :bebidas3 %>
   </div>
 
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <tbody>
+</table>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>
