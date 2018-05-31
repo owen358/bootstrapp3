@@ -220,8 +220,15 @@
           </tr>
         <tbody>
   </table>
+
 FACTORES-ESTILO DE VIDA
-  <%= f.input :activa, label: 'Te consideras una persona:', collection: [ ['Muy activa  ', '0'], ['Activa', '1'], ['Moderadamente activa', '2'], ['Sedentario', '3']], as: :check_boxes %>
+  <%= f.input :activa,
+    label: 'Te consideras una persona:',
+    collection: [ ['Muy activa  ', '0'],
+                ['Activa', '1'],
+                ['Moderadamente activa', '2'],
+                ['Sedentario', '3']],
+    as: :check_boxes %>
 
 </table>
 <table class="table">
@@ -234,17 +241,17 @@ FACTORES-ESTILO DE VIDA
       </thead>
       <tbody>
         <tr>
-          <td><%= f.input :ejercicio1 %></td>
+          <td><%= f.input :ejercicio1, label: false %></td>
           <td><%= f.input :e1, label: false %></td>
           <td><%= f.input :e2, label: false %></td>
         </tr>
         <tr>
-          <td><%= f.input :ejercicio2 %></td>
+          <td><%= f.input :ejercicio2, label: false %></td>
           <td><%= f.input :e3, label: false %></td>
           <td><%= f.input :e4, label: false %></td>
         </tr>
         <tr>
-          <td><%= f.input :ejercicio3 %></td>
+          <td><%= f.input :ejercicio3, label: false %></td>
           <td><%= f.input :e5, label: false %></td>
           <td><%= f.input :e6, label: false %></td>
         </tr>
@@ -252,9 +259,9 @@ FACTORES-ESTILO DE VIDA
 </table>
     <%= f.input :otro_5, label:'Otro' %>
 
-    <%= f.input :fumas1, label:'Fumas?' %>
-    <%= f.input :fumas2, label:'Si es así, cuantos al dia?' %>
-    <%= f.input :fumado, label: 'Has fumado alguna vez?' %>
+    <%= f.input :fumas1, label:'Fumas?', wrapper_html: {class:'checkbox'} %>
+    <%= f.input :fumas2, label:'Si es así, cuantos al dia?', collection: 1..100 %>
+    <%= f.input :fumado, label: ' Has fumado alguna vez?', wrapper_html: {class:'checkbox'} %>
 
 Cual es su consumición media de alcohol (unidades)?<br>
     <%= f.input :alcol1, label: 'Entre semana' %>
@@ -264,47 +271,173 @@ Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en
 
     <%= f.input :alergia1, label: 'Te consideras una persona:', collection: [ ['Historia de alergias en la familia?', '0'], ['Alergia diagnosticada?', '1'], ['Intoleranica diagnosticada?', '2'], ['Has hecho algunas pruebas?', '3'], ['Llevas un EpiPen?', '4'], ['Historia de reacción alergica?', '5']], as: :check_boxes %>
     <%= f.input :alergia2, label:'Proporciona mas detalles y enumera cualquier alimento o producto químico que te podría provocar una reacción:'%>
-    <%= f.input :habitos1 %>
-    <%= f.input :habitos2 %>
-    <%= f.input :habitos3 %>
-    <%= f.input :habitos4 %>
-    <%= f.input :galletas_tartas_bolleria %>
-    <%= f.input :leche %>
-    <%= f.input :huevos %>
-    <%= f.input :chocolates_dulces %>
-    <%= f.input :carne_roja %>
-    <%= f.input :carne_blanca %>
-    <%= f.input :pescado_blanco %>
-    <%= f.input :pezcado_azul %>
-    <%= f.input :carne_procesada %>
-    <%= f.input :pan %>
-    <%= f.input :te %>
-    <%= f.input :cafe %>
-    <%= f.input :refresco_lata %>
-    <%= f.input :agua %>
-    <%= f.input :verdura %>
-    <%= f.input :ensalada %>
-    <%= f.input :tick %>
-    <%= f.input :pecho %>
-    <%= f.input :dieta_sana %>
-    <%= f.input :motivacion %>
-    <%= f.input :desayuno1 %>
-    <%= f.input :desayuno2 %>
-    <%= f.input :desayuno3 %>
-    <%= f.input :almuerzo %>
-    <%= f.input :almuerzo2 %>
-    <%= f.input :almuerzo3 %>
-    <%= f.input :cena1 %>
-    <%= f.input :cena2 %>
-    <%= f.input :cena3 %>
-    <%= f.input :snacks1 %>
-    <%= f.input :snacks2 %>
-    <%= f.input :snacks3 %>
-    <%= f.input :bebidas1 %>
-    <%= f.input :bebidas2 %>
-    <%= f.input :bebidas3 %>
+    <%= f.input :habitos1, label:'Tienes antoja para algún alimento?' %>
+    <%= f.input :habitos2, label:'Hay algún alimento que no te gusta?'%>
+    <%= f.input :habitos3, label:'Cuales son tus alimentos preferidos?'%>
+    <%= f.input :habitos4, label:'Alguna comida que te costaría prescindir de?'%>
+
+  </table>
+  <table class="table-condensed">
+        <thead>
+          <tr>
+            <th>Indica la cantidad aproximada por semana:</th>
+            <th></th>
+            <th>Indica la cantidad aproximada diario</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Galletas/tartas/bolleria</td>
+            <td><%= f.input :galletas_tartas_bolleria, label:false %></td>
+            <td>Pan</td>
+            <td>  <%= f.input :pan, label:false %></td>
+          </tr>
+          <tr>
+            <td>Leche</td>
+            <td><%= f.input :leche, label:false %></td>
+            <td>Tazas de té</td>
+            <td><%= f.input :te, label:false %></td>
+          </tr>
+          <tr>
+            <td>Huevos</td>
+            <td><%= f.input :huevos, label:false %></td>
+            <td>Tazas de café</td>
+            <td><%= f.input :cafe, label:false %></td>
+          </tr>
+          <tr>
+            <td>Chocolates/dulces</td>
+            <td><%= f.input :chocolates_dulces, label:false %></td>
+            <td>Latas de resfrescos con gas</td>
+            <td><%= f.input :refresco_lata, label:false %></td>
+          </tr>
+          <tr>
+            <td>Carne roja (Ternea, Cordero o Cerdo)</td>
+            <td><%= f.input :carne_roja, label:false %></td>
+            <td>Refrescos con gas (light)</td>
+            <td><%= f.input :refresco_light, label:false %></td>
+          </tr>
+          <tr>
+            <td>Carne blanca (Pollo, Pavo, Conejo)</td>
+            <td><%= f.input :carne_blanca, label:false %></td>
+            <td>Vasos de agua</td>
+            <td><%= f.input :agua, label:false %></td>
+          </tr>
+          <tr>
+            <td>Pescado blanco</td>
+            <td><%= f.input :pescado_blanco, label:false %></td>
+            <td>Porciones de Fruta4</td>
+            <td><%= f.input :fruta, label:false %></td>
+          </tr>
+          <tr>
+            <td>Pescado azul</td>
+            <td><%= f.input :pezcado_azul, label:false %></td>
+            <td>Porciones de Verdura4</td>
+            <td><%= f.input :verdura, label:false %></td>
+          </tr>
+          <tr>
+            <td>Carne procesada3</td>
+            <td>  <%= f.input :carne_procesada, label:false %></td>
+            <td>Porciones de ensalada5</td>
+            <td><%= f.input :ensalada, label:false %></td>
+          </tr>
+        <tbody>
+  </table>
+
+    <%= f.input :tick,
+    label:'Pon un tic en las Casillas si son aplicables en tu caso',
+    collection: [
+    ['padecido desorden alimentaria?', '1'],
+    ['comes mucho lacteo o trigo?', '2'],
+    ['te gusta comer/preparer comida?', '3'],
+    ['compras comida ecológica?', '4'],
+    ['añades sal a la comida?', '5'],
+    ['tomas café o té descafeinado?', '6'],
+    ['usas margarinas?', '7'],
+    ['cocinas con aceites vegetales?', '8'],
+    ['bebes agua filtrada?', '9'],
+    ['has cambiado tu dieta ultimamente?', '10'],
+    ['tomas té o café?', '11'],
+    ['comes pan blanco?', '12'],
+    ['comes mucho comida frita?', '13'],
+    ['compras mucha comida para llevar?', '14'],
+    ['comes mucha fruta y verdua fresca?  ', '15'],
+    ['añades muchas salsas a la comida?', '16'],
+    ['comes fuera a menudo?', '17'],
+    ['cocinas para mas personas?', '18'],
+    ['tienes apetito grande?', '19'],
+    ['tu dieta es repetitiva?', '20'],
+    ['comes pasta y arroz?', '21'],
+    ['comes comida preparada?', '22'],
+    ['usas el microondas?', '23'],
+    ['eliges comida bajo en grasa?', '24'],
+    ],
+    as: :check_boxes %>
+
+    <%= f.input :pecho, label:'Te dieron pecho?'%>
+    <%= f.input :dieta_sana, label:'Crecido con una dieta sana?' %>
+
+    <%= f.input :motivacion,
+      label:'Nivel de motivación para cambiar tu dieta y incorporar nueva comida?',
+      collection: [ ['Estoy muy motivado y dispuesto a hacer cambios y probar nuevos alimentos.', '0'],
+      ['Estoy motivado pero, no estoy seguro acerca de lo de los nuevos cambios.', '1'],
+      ['Me siento un poco aprensivo acerca de todo el proceso.', '2']],
+      as: :check_boxes %>
+
+    </table>
+    <table class="table eating_plan">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Dia entre semana 1</th>
+              <th>Dia entre semana 2</th>
+              <th>Fin de Semana</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Desayuno</td>
+              <td><%= f.input :desayuno1,
+                hint:'Introduce la hora del desayuno:',
+                label: false %></td>
+              <td><%= f.input :desayuno2, label: false %></td>
+              <td><%= f.input :desayuno3, label: false %></td>
+            </tr>
+            <tr>
+              <td>Almuerzo</td>
+              <td><%= f.input :almuerzo, label: false, hint:'Introduce la hora del desayuno:' %></td>
+              <td><%= f.input :almuerzo2, label: false %></td>
+              <td><%= f.input :almuerzo3, label: false %></td>
+            </tr>
+            <tr>
+              <td>Cena</td>
+              <td><%= f.input :cena1, hint:'Introduce la hora del desayuno:', label: false %></td>
+              <td><%= f.input :cena2, label: false %></td>
+              <td><%= f.input :cena3, label: false %></td>
+            </tr>
+            <tr>
+              <td>Snacks</td>
+              <td><%= f.input :snacks1, hint:'Introduce la hora del desayuno:', label: false %></td>
+              <td><%= f.input :snacks2, label: false %></td>
+              <td><%= f.input :snacks3, label: false %></td>
+            </tr>
+            <tr>
+              <td>Bebidas</td>
+              <td><%= f.input :bebidas1,
+              placeholder:'Enumera los tipos de bebidas y frecuencia por dia, e.g. 4x café con leche, 3x zumo 1 litro agua',
+              label: false %></td>
+              <td><%= f.input :bebidas2, label: false %></td>
+              <td><%= f.input :bebidas3, label: false %></td>
+            </tr>
+          <tbody>
+    </table>
   </div>
 
+  <div class="form-actions">
+    <%= f.button :submit, "Enviar" %>
+  </div>
+
+<% end %>
 </table>
 <table class="table">
       <thead>
@@ -322,7 +455,3 @@ Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en
         </tr>
       <tbody>
 </table>
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
