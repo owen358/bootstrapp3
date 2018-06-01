@@ -24,8 +24,8 @@
           <tbody>
             <tr>
               <td><%= f.input :sexo, as: :radio_buttons, collection: [['0', 'Hombre'], ['1', 'Mujer']], label_method: :second, value_method: :first %></td>
-              <td><%= f.input :altura %></td>
-              <td><%= f.input :peso %></td>
+              <td><%= f.input :altura, input_html: { min: '1', step: '0.01' } %></td>
+              <td><%= f.input :peso, input_html: { min: '40', step: '0.1' } %></td>
             </tr>
           <tbody>
 
@@ -332,11 +332,11 @@ Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en
           <tr>
             <td>Pescado azul</td>
             <td><%= f.input :pezcado_azul, label:false %></td>
-            <td>Porciones de Verdura4</td>
+            <td>Porciones de Verdura</td>
             <td><%= f.input :verdura, label:false %></td>
           </tr>
           <tr>
-            <td>Carne procesada3</td>
+            <td>Carne procesada</td>
             <td>  <%= f.input :carne_procesada, label:false %></td>
             <td>Porciones de ensalada5</td>
             <td><%= f.input :ensalada, label:false %></td>
@@ -398,43 +398,61 @@ Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en
             <tr>
               <td>Desayuno</td>
               <td><%= f.input :desayuno1,
-                hint:'Introduce la hora del desayuno:',
-                label: false %></td>
-              <td><%= f.input :desayuno2, label: false %></td>
-              <td><%= f.input :desayuno3, label: false %></td>
+                placeholder:'Introduce la hora del desayuno:',
+                label: false,
+                :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
+              <td><%= f.input :desayuno2, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
+              <td><%= f.input :desayuno3, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
             </tr>
             <tr>
               <td>Almuerzo</td>
-              <td><%= f.input :almuerzo, label: false, hint:'Introduce la hora del desayuno:' %></td>
-              <td><%= f.input :almuerzo2, label: false %></td>
-              <td><%= f.input :almuerzo3, label: false %></td>
+              <td><%= f.input :almuerzo, label: false,
+              placeholder:'Introduce la hora del almuerzo:',
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
+              <td><%= f.input :almuerzo2, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
+              <td><%= f.input :almuerzo3, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
             </tr>
             <tr>
               <td>Cena</td>
-              <td><%= f.input :cena1, hint:'Introduce la hora del desayuno:', label: false %></td>
-              <td><%= f.input :cena2, label: false %></td>
-              <td><%= f.input :cena3, label: false %></td>
+              <td><%= f.input :cena1, placeholder:'Introduce la hora de la cena:',
+              label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
+              <td><%= f.input :cena2, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
+              <td><%= f.input :cena3, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
             </tr>
             <tr>
               <td>Snacks</td>
-              <td><%= f.input :snacks1, hint:'Introduce la hora del desayuno:', label: false %></td>
-              <td><%= f.input :snacks2, label: false %></td>
-              <td><%= f.input :snacks3, label: false %></td>
+              <td><%= f.input :snacks1, placeholder:'Introduce la hora snack 1, snack 2, snack 3 ...etc:',
+              label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
+              <td><%= f.input :snacks2, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
+              <td><%= f.input :snacks3, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
             </tr>
             <tr>
               <td>Bebidas</td>
               <td><%= f.input :bebidas1,
               placeholder:'Enumera los tipos de bebidas y frecuencia por dia, e.g. 4x café con leche, 3x zumo 1 litro agua',
-              label: false %></td>
-              <td><%= f.input :bebidas2, label: false %></td>
-              <td><%= f.input :bebidas3, label: false %></td>
+              label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'}%></td>
+              <td><%= f.input :bebidas2, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
+              <td><%= f.input :bebidas3, label: false,
+              :input_html => {:rows => 10,:style=> 'width: 300px'} %></td>
             </tr>
           <tbody>
     </table>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Enviar" %>
+    <%= f.button :submit, "Enviar", class:'btn btn-primary btn-lg' %>
   </div>
 
 <% end %>
