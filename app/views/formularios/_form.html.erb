@@ -7,7 +7,7 @@
     <%= f.input :nombre %>
     <%= f.input :fecha, start_year: Date.today.year %>
     <%= f.input :FdN, label: 'Fecha de nacimiento', start_year: Date.today.year - 90, end_year: Date.today.year - 18 %>
-    <%= f.input :direccion %>
+    <%= f.input :direccion, input_html: {class: 'glyphicon glyphicon-user'} %>
     <%= f.input :email %>
     <%= f.input :telefono %>
     <%= f.input :movil %>
@@ -31,7 +31,6 @@
 
     <%= f.input :motivos, label: '¿Cuales son tus motivos por acudir a Terapia Nutricional?' %>
     <%= f.input :especialistas, as: :boolean, checked_value: true, unchecked_value: false, label: '¿Has acudido a otros especialistas?' %>
-    <%= f.input :dieta %>
     <%= f.input :intolerancia, label: '¿Tienes alguna intolerancia o alergia alimentaria?' %>
     <%= f.input :detalles_1 %>
     <%= f.input :limites, label: '¿Algunos de los siguientes elementos te limitan a la hora de alcanzar tus metas de salud/estilo de vida/ejercicio? ', collection: [ ['Tiempo', '0'], ['Dinero', '1'], ['Entendimiento', '2'], ['Fuerza de voluntad', '3'], ['Apoyo', '4']], as: :check_boxes %>
@@ -271,6 +270,7 @@ Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en
 
     <%= f.input :alergia1, label: 'Te consideras una persona:', collection: [ ['Historia de alergias en la familia?', '0'], ['Alergia diagnosticada?', '1'], ['Intoleranica diagnosticada?', '2'], ['Has hecho algunas pruebas?', '3'], ['Llevas un EpiPen?', '4'], ['Historia de reacción alergica?', '5']], as: :check_boxes %>
     <%= f.input :alergia2, label:'Proporciona mas detalles y enumera cualquier alimento o producto químico que te podría provocar una reacción:'%>
+
     <%= f.input :habitos1, label:'Tienes antoja para algún alimento?' %>
     <%= f.input :habitos2, label:'Hay algún alimento que no te gusta?'%>
     <%= f.input :habitos3, label:'Cuales son tus alimentos preferidos?'%>

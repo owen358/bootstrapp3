@@ -1,5 +1,7 @@
 class FormulariosController < ApplicationController
   before_action :set_formulario, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:show, :new, :index]
+  before_action :authenticate_admin, only: [:show, :index]
 
   # GET /formularios
   # GET /formularios.json
@@ -62,6 +64,17 @@ class FormulariosController < ApplicationController
   end
 
   private
+
+  def authenticate_admin
+    unless current_user.admin?
+      redirect_to root_path
+    end
+  end
+
+    # def authenticate
+    #   authenticate_user! && current_user.admin?
+    # end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_formulario
       @formulario = Formulario.find(params[:id])

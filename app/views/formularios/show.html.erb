@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>
-  <strong>Nombre:</strong>
   <%= @formulario.nombre %>
 </h1>
 
@@ -23,7 +22,11 @@
 
 <p>
   <strong>Sexo:</strong>
-  <%= @formulario.sexo %>
+    <% if @formulario.sexo %>
+    Mujer
+    <% else %>
+    Hombre
+    <% end %>
 </p>
 
 <p>
@@ -57,453 +60,275 @@
 </p>
 
 <p>
-  <strong>Motivos:</strong>
+  <strong>Motivos por acudir a Terapia Nutricional:</strong>
   <%= @formulario.motivos %>
 </p>
 
-HISTORIA MÉDICA
 <p>
-  <strong>Especialistas:</strong>
+  <strong>Acudido a otros especialistas?:</strong>
   <%= @formulario.especialistas %>
-</p>
+</p><br>
 
 <p>
-  <strong>Dieta:</strong>
-  <%= @formulario.dieta %>
-</p>
-
-<p>
-  <strong>Intolerancia:</strong>
+  <strong>Intolerancias:</strong>
   <%= @formulario.intolerancia %>
 </p>
-
 <p>
-  <strong>Detalles 1:</strong>
+  <strong>Detalles:</strong>
   <%= @formulario.detalles_1 %>
-</p>
+</p><br>
 
 <p>
-  <strong>Limites:</strong>
+  <strong>Limitesde alcanzar sus metas de salud:</strong>
   <%= @formulario.limites %>
 </p>
-
 <p>
   <strong>Otro 1:</strong>
   <%= @formulario.otro_1 %>
-</p>
+</p><br><br>
 
-<p>
-  <strong>Problema1:</strong>
-  <%= @formulario.problema1 %>
-</p>
 
-<p>
-  <strong>P1:</strong>
-  <%= @formulario.p1 %>
-</p>
-
-<p>
-  <strong>P2:</strong>
-  <%= @formulario.p2 %>
-</p>
-
-<p>
-  <strong>P3:</strong>
-  <%= @formulario.p3 %>
-</p>
-
-<p>
-  <strong>Problema2:</strong>
-  <%= @formulario.problema2 %>
-</p>
-
-<p>
-  <strong>P4:</strong>
-  <%= @formulario.p4 %>
-</p>
-
-<p>
-  <strong>P5:</strong>
-  <%= @formulario.p5 %>
-</p>
-
-<p>
-  <strong>P6:</strong>
-  <%= @formulario.p6 %>
-</p>
-
-<p>
-  <strong>Problema3:</strong>
-  <%= @formulario.problema3 %>
-</p>
-
-<p>
-  <strong>P7:</strong>
-  <%= @formulario.p7 %>
-</p>
-
-<p>
-  <strong>P8:</strong>
-  <%= @formulario.p8 %>
-</p>
-
-<p>
-  <strong>P9:</strong>
-  <%= @formulario.p9 %>
-</p>
-
-<p>
-  <strong>Problema4:</strong>
-  <%= @formulario.problema4 %>
-</p>
-
-<p>
-  <strong>P10:</strong>
-  <%= @formulario.p10 %>
-</p>
-
-<p>
-  <strong>P11:</strong>
-  <%= @formulario.p11 %>
-</p>
-
-<p>
-  <strong>P12:</strong>
-  <%= @formulario.p12 %>
-</p>
-
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th>Problema de salud/síntoma/cirujía</th>
+          <th>Edad de inicio</th>
+          <th>Duración</th>
+          <th>Medicación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @formulario.problema1 %></td>
+          <td><%= @formulario.p1 %></td>
+          <td><%= @formulario.p2 %></td>
+          <td><%= @formulario.p3 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.problema2 %></td>
+          <td><%= @formulario.p4 %></td>
+          <td><%= @formulario.p5 %></td>
+          <td><%= @formulario.p6 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.problema3 %></td>
+          <td><%= @formulario.p7 %></td>
+          <td><%= @formulario.p8 %></td>
+          <td><%= @formulario.p9 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.problema4 %></td>
+          <td><%= @formulario.p10 %></td>
+          <td><%= @formulario.p11 %></td>
+          <td><%= @formulario.p12 %></td>
+        </tr>
+      <tbody>
+</table>
 <p>
   <strong>Otro 2:</strong>
   <%= @formulario.otro_2 %>
-</p>
+</p><br><br>
 
-<p>
-  <strong>Medicacion1:</strong>
-  <%= @formulario.medicacion1 %>
-</p>
 
-<p>
-  <strong>M1:</strong>
-  <%= @formulario.m1 %>
-</p>
-
-<p>
-  <strong>M2:</strong>
-  <%= @formulario.m2 %>
-</p>
-
-<p>
-  <strong>M3:</strong>
-  <%= @formulario.m3 %>
-</p>
-
-<p>
-  <strong>M4:</strong>
-  <%= @formulario.m4 %>
-</p>
-
-<p>
-  <strong>M5:</strong>
-  <%= @formulario.m5 %>
-</p>
-
-<p>
-  <strong>M6:</strong>
-  <%= @formulario.m6 %>
-</p>
-
-<p>
-  <strong>Medicacion2:</strong>
-  <%= @formulario.medicacion2 %>
-</p>
-
-<p>
-  <strong>M7:</strong>
-  <%= @formulario.m7 %>
-</p>
-
-<p>
-  <strong>M8:</strong>
-  <%= @formulario.m8 %>
-</p>
-
-<p>
-  <strong>M9:</strong>
-  <%= @formulario.m9 %>
-</p>
-
-<p>
-  <strong>M10:</strong>
-  <%= @formulario.m10 %>
-</p>
-
-<p>
-  <strong>M11:</strong>
-  <%= @formulario.m11 %>
-</p>
-
-<p>
-  <strong>M12:</strong>
-  <%= @formulario.m12 %>
-</p>
-
-<p>
-  <strong>Medicacion3:</strong>
-  <%= @formulario.medicacion3 %>
-</p>
-
-<p>
-  <strong>M13:</strong>
-  <%= @formulario.m13 %>
-</p>
-
-<p>
-  <strong>M14:</strong>
-  <%= @formulario.m14 %>
-</p>
-
-<p>
-  <strong>M15:</strong>
-  <%= @formulario.m15 %>
-</p>
-
-<p>
-  <strong>M16:</strong>
-  <%= @formulario.m16 %>
-</p>
-
-<p>
-  <strong>M17:</strong>
-  <%= @formulario.m17 %>
-</p>
-
-<p>
-  <strong>M18:</strong>
-  <%= @formulario.m18 %>
-</p>
-
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th>Medicación</th>
+          <th>Dosis</th>
+          <th>Condición</th>
+          <th>Frecuencia</th>
+          <th>Duración</th>
+          <th>Actual</th>
+          <th>Pasado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @formulario.medicacion1 %></td>
+          <td><%= @formulario.m1 %></td>
+          <td><%= @formulario.m2 %></td>
+          <td><%= @formulario.m3 %></td>
+          <td><%= @formulario.m4 %></td>
+          <td><%= @formulario.m5 %></td>
+          <td><%= @formulario.m6 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.medicacion2 %></td>
+          <td><%= @formulario.m7 %></td>
+          <td><%= @formulario.m8 %></td>
+          <td><%= @formulario.m9 %></td>
+          <td><%= @formulario.m10 %></td>
+          <td><%= @formulario.m11 %></td>
+          <td><%= @formulario.m12 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.medicacion3 %></td>
+          <td><%= @formulario.m13 %></td>
+          <td><%= @formulario.m14 %></td>
+          <td><%= @formulario.m15 %></td>
+          <td><%= @formulario.m16 %></td>
+          <td><%= @formulario.m17 %></td>
+          <td><%= @formulario.m18 %></td>
+        </tr>
+      <tbody>
+</table>
 <p>
   <strong>Otro 3:</strong>
   <%= @formulario.otro_3 %>
-</p>
+</p><br><br>
 
-<p>
-  <strong>Suplemento1:</strong>
-  <%= @formulario.suplemento1 %>
-</p>
-
-<p>
-  <strong>S1:</strong>
-  <%= @formulario.s1 %>
-</p>
-
-<p>
-  <strong>S2:</strong>
-  <%= @formulario.s2 %>
-</p>
-
-<p>
-  <strong>S3:</strong>
-  <%= @formulario.s3 %>
-</p>
-
-<p>
-  <strong>S4:</strong>
-  <%= @formulario.s4 %>
-</p>
-
-<p>
-  <strong>Suplemento2:</strong>
-  <%= @formulario.suplemento2 %>
-</p>
-
-<p>
-  <strong>S5:</strong>
-  <%= @formulario.s5 %>
-</p>
-
-<p>
-  <strong>S6:</strong>
-  <%= @formulario.s6 %>
-</p>
-
-<p>
-  <strong>S7:</strong>
-  <%= @formulario.s7 %>
-</p>
-
-<p>
-  <strong>S8:</strong>
-  <%= @formulario.s8 %>
-</p>
-
-<p>
-  <strong>Suplemento3:</strong>
-  <%= @formulario.suplemento3 %>
-</p>
-
-<p>
-  <strong>S9:</strong>
-  <%= @formulario.s9 %>
-</p>
-
-<p>
-  <strong>S10:</strong>
-  <%= @formulario.s10 %>
-</p>
-
-<p>
-  <strong>S11:</strong>
-  <%= @formulario.s11 %>
-</p>
-
-<p>
-  <strong>S12:</strong>
-  <%= @formulario.s12 %>
-</p>
-
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th>Suplemento</th>
+          <th>Dosis</th>
+          <th>Duración</th>
+          <th>Actual</th>
+          <th>Pasado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @formulario.suplemento1 %></td>
+          <td><%= @formulario.s1 %></td>
+          <td><%= @formulario.s2 %></td>
+          <td><%= @formulario.s3 %></td>
+          <td><%= @formulario.s4 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.suplemento2 %></td>
+          <td><%= @formulario.s5 %></td>
+          <td><%= @formulario.s6 %></td>
+          <td><%= @formulario.s7 %></td>
+          <td><%= @formulario.s8 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.suplemento3 %></td>
+          <td><%= @formulario.s9 %></td>
+          <td><%= @formulario.s10 %></td>
+          <td><%= @formulario.s11 %></td>
+          <td><%= @formulario.s12 %></td>
+        </tr>
+      <tbody>
+</table>
 <p>
   <strong>Otro 4:</strong>
   <%= @formulario.otro_4 %>
-</p>
+</p><br><br>
 
-<p>
-  <strong>Madre:</strong>
-  <%= @formulario.madre %>
-</p>
 
-<p>
-  <strong>Padre:</strong>
-  <%= @formulario.padre %>
-</p>
-
-<p>
-  <strong>Abuela mat:</strong>
-  <%= @formulario.abuela_mat %>
-</p>
-
-<p>
-  <strong>Abuela pat:</strong>
-  <%= @formulario.abuela_pat %>
-</p>
-
-<p>
-  <strong>Abuelo mat:</strong>
-  <%= @formulario.abuelo_mat %>
-</p>
-
-<p>
-  <strong>Abuelo pat:</strong>
-  <%= @formulario.abuelo_pat %>
-</p>
-
-<p>
-  <strong>Hermanos:</strong>
-  <%= @formulario.hermanos %>
-</p>
-
-<p>
-  <strong>Hermanas:</strong>
-  <%= @formulario.hermanas %>
-</p>
-
-<p>
-  <strong>Tios:</strong>
-  <%= @formulario.tios %>
-</p>
-
-<p>
-  <strong>Tias:</strong>
-  <%= @formulario.tias %>
-</p>
-
-<p>
-  <strong>Ninos:</strong>
-  <%= @formulario.ninos %>
-</p>
-
-<p>
-  <strong>Sobrinos:</strong>
-  <%= @formulario.sobrinos %>
-</p>
-
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th>Quién</th>
+          <th>Condición</th>
+          <th>Quién</th>
+          <th>Condición</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Madre</td>
+          <td><%= @formulario.madre %></td>
+          <td>Padre</td>
+          <td><%= @formulario.padre %></td>
+        </tr>
+        <tr>
+          <td>Abuela materna</td>
+          <td><%= @formulario.abuela_mat %></td>
+          <td>Abuela paterna</td>
+          <td><%= @formulario.abuela_pat %></td>
+        </tr>
+        <tr>
+          <td>Abuelo materno</td>
+          <td><%= @formulario.abuelo_mat %></td>
+          <td>Abuelo paterno</td>
+          <td><%= @formulario.abuelo_mat %></td>
+        </tr>
+        <tr>
+          <td>Hermanos</td>
+          <td><%= @formulario.hermanos %></td>
+          <td>Hermanas</td>
+          <td><%= @formulario.hermanas %></td>
+        </tr>
+        <tr>
+          <td>Tíos</td>
+          <td><%= @formulario.tios %></td>
+          <td>Tías</td>
+          <td><%= @formulario.tias %></td>
+        </tr>
+        <tr>
+          <td>Niños</td>
+          <td><%= @formulario.ninos %></td>
+          <td>Sobrinos</td>
+          <td><%= @formulario.sobrinos %></td>
+        </tr>
+      <tbody>
+</table>
 <p>
   <strong>Activa:</strong>
   <%= @formulario.activa %>
-</p>
+</p><br>
 
-<p>
-  <strong>Ejercicio1:</strong>
-  <%= @formulario.ejercicio1 %>
-</p>
 
+</table>
+<table class="table">
+      <thead>
+        <tr>
+          <th>Tipo de ejercicio</th>
+          <th>Frecuencia (e.g. 3x p/semana)</th>
+          <th>Duración (e.g. 45 mins)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @formulario.ejercicio1 %></td>
+          <td><%= @formulario.e1 %></td>
+          <td><%= @formulario.e2 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.ejercicio2 %></td>
+          <td><%= @formulario.e3 %></td>
+          <td><%= @formulario.e4 %></td>
+        </tr>
+        <tr>
+          <td><%= @formulario.ejercicio3 %></td>
+          <td><%= @formulario.e5 %></td>
+          <td><%= @formulario.e6 %></td>
+        </tr>
+      <tbody>
+</table>
 <p>
-  <strong>E1:</strong>
-  <%= @formulario.e1 %>
-</p>
-
-<p>
-  <strong>E2:</strong>
-  <%= @formulario.e2 %>
-</p>
-
-<p>
-  <strong>Ejercicio2:</strong>
-  <%= @formulario.ejercicio2 %>
-</p>
-
-<p>
-  <strong>E3:</strong>
-  <%= @formulario.e3 %>
-</p>
-
-<p>
-  <strong>E4:</strong>
-  <%= @formulario.e4 %>
-</p>
-
-<p>
-  <strong>Ejercicio3:</strong>
-  <%= @formulario.ejercicio3 %>
-</p>
-
-<p>
-  <strong>E5:</strong>
-  <%= @formulario.e5 %>
-</p>
-
-<p>
-  <strong>E6:</strong>
-  <%= @formulario.e6 %>
-</p>
-
-<p>
-  <strong>Otro 5:</strong>
+  <strong>Otro:</strong>
   <%= @formulario.otro_5 %>
-</p>
+</p><br>
+
+
 
 <p>
-  <strong>Fumas1:</strong>
+  <strong>Fuma?</strong>
   <%= @formulario.fumas1 %>
 </p>
-
 <p>
-  <strong>Fumas2:</strong>
+  <strong>cuantos al dia?</strong>
   <%= @formulario.fumas2 %>
 </p>
-
 <p>
-  <strong>Fumado:</strong>
+  <strong>Has fumado alguna vez?</strong>
   <%= @formulario.fumado %>
 </p>
-
 <p>
-  <strong>Alcol1:</strong>
+  <strong>consumición media de alcohol (unidades)</strong><br><br>
+  Entre semana
   <%= @formulario.alcol1 %>
 </p>
-
 <p>
-  <strong>Alcol2:</strong>
+  <strong></strong>
+  Fin de semana
   <%= @formulario.alcol2 %>
 </p>
 
@@ -517,23 +342,24 @@ HISTORIA MÉDICA
   <%= @formulario.alergia2 %>
 </p>
 
+
 <p>
-  <strong>Habitos1:</strong>
+  <strong>Tienes antoja para algún alimento?</strong>
   <%= @formulario.habitos1 %>
 </p>
 
 <p>
-  <strong>Habitos2:</strong>
+  <strong>Hay algún alimento que no te gusta?</strong>
   <%= @formulario.habitos2 %>
 </p>
 
 <p>
-  <strong>Habitos3:</strong>
+  <strong>Cuales son tus alimentos preferidos?</strong>
   <%= @formulario.habitos3 %>
 </p>
 
 <p>
-  <strong>Habitos4:</strong>
+  <strong>Alguna comida que te costaría prescindir de?</strong>
   <%= @formulario.habitos4 %>
 </p>
 

@@ -4,3 +4,8 @@
 <li><%= link_to 'Page2', page_path('page2') %></li>
 <li><%= link_to 'Formulario', formulario_path('new') %></li>
 <li><%= link_to 'Contacto', page_path('contacto') %></li>
+<% if user_signed_in? %>
+  <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
+<% else %>
+<li><%= link_to 'Acceso', new_user_session_path %></li>
+<% end %>
