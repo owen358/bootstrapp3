@@ -1,2 +1,0 @@
-class Cuestionario < ApplicationRecord
-end

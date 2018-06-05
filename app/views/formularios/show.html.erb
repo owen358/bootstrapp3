@@ -83,7 +83,7 @@
   <%= @formulario.limites %>
 </p>
 <p>
-  <strong>Otro 1:</strong>
+  <strong>Otro:</strong>
   <%= @formulario.otro_1 %>
 </p><br><br>
 
@@ -126,7 +126,7 @@
       <tbody>
 </table>
 <p>
-  <strong>Otro 2:</strong>
+  <strong>Otro:</strong>
   <%= @formulario.otro_2 %>
 </p><br><br>
 
@@ -175,7 +175,7 @@
       <tbody>
 </table>
 <p>
-  <strong>Otro 3:</strong>
+  <strong>Otro:</strong>
   <%= @formulario.otro_3 %>
 </p><br><br>
 
@@ -215,7 +215,7 @@
       <tbody>
 </table>
 <p>
-  <strong>Otro 4:</strong>
+  <strong>Otro:</strong>
   <%= @formulario.otro_4 %>
 </p><br><br>
 
@@ -305,10 +305,10 @@
 <p>
   <strong>Otro:</strong>
   <%= @formulario.otro_5 %>
-</p><br>
+</p><br><br>
 
 
-
+TOBACCO & ALCOL<br><br>
 <p>
   <strong>Fuma?</strong>
   <%= @formulario.fumas1 %>
@@ -333,12 +333,12 @@
 </p>
 
 <p>
-  <strong>Alergia1:</strong>
+  <strong>Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en el espacio abajo: Alergia1:</strong>
   <%= @formulario.alergia1 %>
 </p>
 
 <p>
-  <strong>Alergia2:</strong>
+  <strong>Proporciona mas detalles y enumera cualquier alimento o producto químico que te podría provocar una reacción:</strong>
   <%= @formulario.alergia2 %>
 </p>
 
@@ -362,181 +362,144 @@
   <strong>Alguna comida que te costaría prescindir de?</strong>
   <%= @formulario.habitos4 %>
 </p>
+<br><br>
+
+
+
+</table>
+<table class="table-condensed">
+      <thead>
+        <tr>
+          <th>Indica la cantidad aproximada por semana:</th>
+          <th></th>
+          <th>Indica la cantidad aproximada diario</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Galletas/tartas/bolleria</td>
+          <td><%= @formulario.galletas_tartas_bolleria %></td>
+          <td>Pan</td>
+          <td><%= @formulario.pan %></td>
+        </tr>
+        <tr>
+          <td>Leche</td>
+          <td><%= @formulario.leche %></td>
+          <td>Tazas de té</td>
+          <td><%= @formulario.te %></td>
+        </tr>
+        <tr>
+          <td>Huevos</td>
+          <td><%= @formulario.huevos %></td>
+          <td>Tazas de café</td>
+          <td><%= @formulario.cafe %></td>
+        </tr>
+        <tr>
+          <td>Chocolates/dulces</td>
+          <td><%= @formulario.chocolates_dulces %></td>
+          <td>Latas de resfrescos con gas</td>
+          <td><%= @formulario.refresco_lata %></td>
+        </tr>
+        <tr>
+          <td>Carne roja (Ternea, Cordero o Cerdo)</td>
+          <td><%= @formulario.carne_roja %></td>
+          <td>Refrescos con gas (light)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Carne blanca (Pollo, Pavo, Conejo)</td>
+          <td><%= @formulario.carne_blanca %></td>
+          <td>Vasos de agua</td>
+          <td><%= @formulario.agua %></td>
+        </tr>
+        <tr>
+          <td>Pescado blanco</td>
+          <td><%= @formulario.pescado_blanco %></td>
+          <td>Porciones de Fruta</td>
+          <td>></td>
+        </tr>
+        <tr>
+          <td>Pescado azul</td>
+          <td><%= @formulario.pezcado_azul %></td>
+          <td>Porciones de Verdura</td>
+          <td><%= @formulario.verdura %></td>
+        </tr>
+        <tr>
+          <td>Carne procesada</td>
+          <td><%= @formulario.carne_procesada %></td>
+          <td>Porciones de ensalada5</td>
+          <td><%= @formulario.ensalada %></td>
+        </tr>
+      <tbody>
+</table>
+<br><br>
+
 
 <p>
-  <strong>Galletas tartas bolleria:</strong>
-  <%= @formulario.galletas_tartas_bolleria %>
-</p>
-
-<p>
-  <strong>Leche:</strong>
-  <%= @formulario.leche %>
-</p>
-
-<p>
-  <strong>Huevos:</strong>
-  <%= @formulario.huevos %>
-</p>
-
-<p>
-  <strong>Chocolates dulces:</strong>
-  <%= @formulario.chocolates_dulces %>
-</p>
-
-<p>
-  <strong>Carne roja:</strong>
-  <%= @formulario.carne_roja %>
-</p>
-
-<p>
-  <strong>Carne blanca:</strong>
-  <%= @formulario.carne_blanca %>
-</p>
-
-<p>
-  <strong>Pescado blanco:</strong>
-  <%= @formulario.pescado_blanco %>
-</p>
-
-<p>
-  <strong>Pezcado azul:</strong>
-  <%= @formulario.pezcado_azul %>
-</p>
-
-<p>
-  <strong>Carne procesada:</strong>
-  <%= @formulario.carne_procesada %>
-</p>
-
-<p>
-  <strong>Pan:</strong>
-  <%= @formulario.pan %>
-</p>
-
-<p>
-  <strong>Te:</strong>
-  <%= @formulario.te %>
-</p>
-
-<p>
-  <strong>Cafe:</strong>
-  <%= @formulario.cafe %>
-</p>
-
-<p>
-  <strong>Refresco lata:</strong>
-  <%= @formulario.refresco_lata %>
-</p>
-
-<p>
-  <strong>Agua:</strong>
-  <%= @formulario.agua %>
-</p>
-
-<p>
-  <strong>Verdura:</strong>
-  <%= @formulario.verdura %>
-</p>
-
-<p>
-  <strong>Ensalada:</strong>
-  <%= @formulario.ensalada %>
-</p>
-
-<p>
-  <strong>Tick:</strong>
+  <strong>Pon un tic en las Casillas si son aplicables en tu caso:</strong>
   <%= @formulario.tick %>
 </p>
 
 <p>
-  <strong>Pecho:</strong>
+  <strong>Te dieron pecho?:</strong>
   <%= @formulario.pecho %>
 </p>
 
 <p>
-  <strong>Dieta sana:</strong>
+  <strong>Crecido con una dieta sana?:</strong>
   <%= @formulario.dieta_sana %>
 </p>
 
 <p>
-  <strong>Motivacion:</strong>
+  <strong>Nivel de motivación para cambiar tu dieta y incorporar nueva comida?:</strong>
   <%= @formulario.motivacion %>
 </p>
 
-<p>
-  <strong>Desayuno1:</strong>
-  <%= @formulario.desayuno1 %>
-</p>
-
-<p>
-  <strong>Desayuno2:</strong>
-  <%= @formulario.desayuno2 %>
-</p>
-
-<p>
-  <strong>Desayuno3:</strong>
-  <%= @formulario.desayuno3 %>
-</p>
-
-<p>
-  <strong>Almuerzo:</strong>
-  <%= @formulario.almuerzo %>
-</p>
-
-<p>
-  <strong>Almuerzo2:</strong>
-  <%= @formulario.almuerzo2 %>
-</p>
-
-<p>
-  <strong>Almuerzo3:</strong>
-  <%= @formulario.almuerzo3 %>
-</p>
-
-<p>
-  <strong>Cena1:</strong>
-  <%= @formulario.cena1 %>
-</p>
-
-<p>
-  <strong>Cena2:</strong>
-  <%= @formulario.cena2 %>
-</p>
-
-<p>
-  <strong>Cena3:</strong>
-  <%= @formulario.cena3 %>
-</p>
-
-<p>
-  <strong>Snacks1:</strong>
-  <%= @formulario.snacks1 %>
-</p>
-
-<p>
-  <strong>Snacks2:</strong>
-  <%= @formulario.snacks2 %>
-</p>
-
-<p>
-  <strong>Snacks3:</strong>
-  <%= @formulario.snacks3 %>
-</p>
-
-<p>
-  <strong>Bebidas1:</strong>
-  <%= @formulario.bebidas1 %>
-</p>
-
-<p>
-  <strong>Bebidas2:</strong>
-  <%= @formulario.bebidas2 %>
-</p>
-
-<p>
-  <strong>Bebidas3:</strong>
-  <%= @formulario.bebidas3 %>
-</p>
+<br><br>
+</table>
+<table class="table eating_plan">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Dia entre semana 1</th>
+          <th>Dia entre semana 2</th>
+          <th>Fin de Semana</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Desayuno</td>
+          <td><%= @formulario.desayuno1 %></td>
+          <td><%= @formulario.desayuno2 %></td>
+          <td><%= @formulario.desayuno3 %></td>
+        </tr>
+        <tr>
+          <td>Almuerzo</td>
+          <td><%= @formulario.almuerzo %></td>
+          <td><%= @formulario.almuerzo2 %></td>
+          <td><%= @formulario.almuerzo3 %></td>
+        </tr>
+        <tr>
+          <td>Cena</td>
+          <td><%= @formulario.cena1 %></td>
+          <td><%= @formulario.cena2 %></td>
+          <td><%= @formulario.cena3 %></td>
+        </tr>
+        <tr>
+          <td>Snacks</td>
+          <td><%= @formulario.snacks1 %></td>
+          <td><%= @formulario.snacks2 %></td>
+          <td><%= @formulario.snacks3 %></td>
+        </tr>
+        <tr>
+          <td>Bebidas</td>
+          <td><%= @formulario.bebidas1 %></td>
+          <td><%= @formulario.bebidas2 %></td>
+          <td><%= @formulario.bebidas3 %></td>
+        </tr>
+      <tbody>
+</table>
 
 <%= link_to 'Edit', edit_formulario_path(@formulario) %> |
 <%= link_to 'Back', formularios_path %>
