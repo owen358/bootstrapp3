@@ -1,14 +1,17 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'About', page_path('about') %></li>
-<li><%= link_to 'Page1', page_path('page1') %></li>
-<li><%= link_to 'Page2', page_path('page2') %></li>
-<li><%= link_to 'Formulario', formulario_path('new') %></li>
+<li><%= link_to 'Inicio', root_path %></li>
+<li><%= link_to 'Medicina Funcional', page_path('about') %></li>
+<li><%= link_to 'Terapia Nutricional', page_path('page1') %></li>
+<li><%= link_to 'Acupuntura', page_path('page2') %></li>
+<li><%= link_to 'Consulta ', page_path('consulta') %></li>
 <li><%= link_to 'Contacto', page_path('contacto') %></li>
+
 <% if user_signed_in? %>
   <li><%= link_to 'Salir', destroy_user_session_path, method: :delete %></li>
 <% else %>
 <li><%= link_to 'Acceso', new_user_session_path %></li>
 <% end %>
+
 <% if current_user && current_user.admin? %>
   <li><%= link_to 'Pacientes', formularios_path %></li>
 <% end %>

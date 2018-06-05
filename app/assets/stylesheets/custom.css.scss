@@ -2,7 +2,7 @@
 body {
     background-image:image-url('gotita.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: 0 51px;
 }
 
@@ -21,4 +21,17 @@ main {
 
 .navbar {
  margin-bottom: 50px;
+}
+h1 {
+  font-family: 'Architects Daughter';
+  color: blue;
+}
+p {
+  font-family: 'Architects Daughter';
+  font-size: 20px;
+  // text-shadow: 4px 4px 4px #aaa;
+}
+
+.great-vibes {
+  font-family: 'Great Vibes', cursive;
 }
