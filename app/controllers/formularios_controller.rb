@@ -1,6 +1,7 @@
 class FormulariosController < ApplicationController
   before_action :set_formulario, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show, :new, :index]
+  before_action :authenticate_user!, only: [:show, :new]
+  # before_action :user_signed_in?, only: [:show, :new]
   before_action :authenticate_admin, only: [:show, :index]
 
   # GET /formularios

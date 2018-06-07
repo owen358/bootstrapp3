@@ -16,14 +16,15 @@ durar hasta 2 o 3 meses pero proporcionará las herramientas
 para mantenerte con salud óptimo durante el resto de tu vida.</p>
 <br><br>
 <p>Antes de la cita tendrás que rellenar un
-<%= link_to 'cuestionario', formularios_path %>, éste
+<%= link_to 'cuestionario', new_formulario_path %>, éste
 incluye preguntas acerca de tu historial de salud, tu dieta
 actual, medicamentos y estilo de vida. Habrá que entregarlo
 24 horas antes de la cita</p>
-<br><br>
+<br><br><br><br><br>
+
 PRIMERA CONSULTA<br><br>
 <p>Aquí identificamos posibles desencadenantes y factores
-subyacentes los cuales podrían influir en tu salud. Tu
+  subyacentes los cuales podrían influir en tu salud. Tu
 terapeuta elabora tu historial clínico, escucha tu historia,
 te hace muchas preguntas y puede que te haga algunas
 evaluaciones clínicas.</p>
@@ -68,4 +69,6 @@ diferentes aspectos de tu salud y bienestar.</p>
 y los cambios en el estilo de vida, en las sesiones de
 seguimiento se le prestará mas atención al elemento de
 coaching nutricional y de salud, según Técnicas de
-programación lingüística y neuroplasticidad.</p>
+programación lingüística y neuroplasticidad.</p><br><br>
+
+<%= link_to 'Rellenar Cuestionario', new_formulario_path, class:"btn btn-info btn-lg" %>

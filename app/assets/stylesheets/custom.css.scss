@@ -1,37 +1,66 @@
 
 body {
-    background-image:image-url('gotita.png');
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: 0 51px;
+//     background-image:image-url('gotita.png');
+//     background-size: auto;
+//     background-repeat: repeat-x;
+//     background-position: 0 51px;
+// background-color: transparent;
+background:rgba(191,191,191,1);
+// background: linear-gradient(to bottom right, rgba(185,185,185,1), rgba(195,195,195,1), rgba(210,210,210,1) )
+// background: linear-gradient(to right, rgba(190,190,190,1), rgba(196,196,196,1), rgba(190,190,190,1), rgba(190,190,190,1));
+background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), rgba(199,199,199,1),rgba(180,180,180,1), rgba(190,190,190,1));
+
 }
 
 .container2 {
   margin: 0px;
   background-color: transparent;
-  background:rgba(0,0,0,0);
+  // background: linear-gradient(blue, pink);
+  // background:rgba(0,0,0,0);
 }
 
 main {
+  background-image:image-url('gotita.png');
+  background-position: 0 0px;
+  background-repeat: repeat-x;
+  // background: linear-gradient(blue, pink);
   background-color: transparent;
-  margin-top: 200px;
+  // background:rgba(199,199,199,1);
+  margin-top: 51px;
   padding-left: 200px;
   padding-right: 200px;
+  border-top: 200px;
 }
+
+
 
 .navbar {
  margin-bottom: 50px;
+ color: lightblue;
 }
 h1 {
-  font-family: 'Architects Daughter';
-  color: blue;
+  // font-family: 'Architects Daughter';
+  font-family: 'Tillana', cursive;
+  color: lightblue;
+  margin-top: 130px;
 }
+
 p {
-  font-family: 'Architects Daughter';
+  font-family: 'Tillana', cursive;
+  // font-family: 'Architects Daughter';
   font-size: 20px;
-  // text-shadow: 4px 4px 4px #aaa;
 }
 
 .great-vibes {
   font-family: 'Great Vibes', cursive;
+}
+
+.nutricion {
+  float: right;
+  // padding-bottom: 100px;
+  margin-left: 10px;
+  // border-bottom: 100px;
+  border: 5px  #fff;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 5%;
 }
