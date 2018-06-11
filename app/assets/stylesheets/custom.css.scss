@@ -21,6 +21,7 @@ background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), 
 
 main {
   background-image:image-url('gotita-flip.png');
+  background-size: 100% auto;
   background-position: 0 0px;
   // background-repeat: repeat-x;
   // background: linear-gradient(blue, pink);
@@ -42,7 +43,7 @@ h1 {
   // font-family: 'Architects Daughter';
   font-family: 'Tillana', cursive;
   color: #5bc0de;
-  margin-top: 130px;
+  margin-top: 160px;
 }
 
 h2 {
