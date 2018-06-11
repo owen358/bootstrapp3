@@ -20,9 +20,9 @@ background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), 
 }
 
 main {
-  background-image:image-url('gotita.png');
+  background-image:image-url('gotita-flip.png');
   background-position: 0 0px;
-  background-repeat: repeat-x;
+  // background-repeat: repeat-x;
   // background: linear-gradient(blue, pink);
   background-color: transparent;
   // background:rgba(199,199,199,1);
@@ -41,8 +41,15 @@ main {
 h1 {
   // font-family: 'Architects Daughter';
   font-family: 'Tillana', cursive;
-  color: lightblue;
+  color: #5bc0de;
   margin-top: 130px;
+}
+
+h2 {
+  // font-family: 'Architects Daughter';
+  font-family: 'Tillana', cursive;
+  color: #5bc0de;
+  // margin-top: 130px;
 }
 
 p {
@@ -63,4 +70,25 @@ p {
   border: 5px  #fff;
   box-shadow: 10px 10px 5px #888888;
   border-radius: 5%;
+}
+
+.style_image6 {
+  border: 5px double #3A6028;
+  box-shadow: 10px 10px 5px #888888;
+  // border-radius: 5%;
+  float: center;
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+.style_image4 {
+  border: 5px double #5bc0de;
+  box-shadow: 10px 10px 5px #888888;
+  border-radius: 8%;
+  float: right;
+  // padding: 10px;
+  display: block;
+  margin: 20px 20px 20px 20px;
+  // width: 40%;
 }
