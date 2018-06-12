@@ -73,6 +73,19 @@ p {
   border-radius: 5%;
 }
 
+.nutricion2 {
+  float: right;
+  // padding-bottom: 100px;
+  margin-left: 20px;
+  // border-bottom: 300px;
+  border: 5px  #fff;
+  box-shadow: 10px 10px 5px #888888;
+  // border-radius: 5%;
+  height: 45%;
+    width: 45%;
+
+}
+
 .style_image6 {
   border: 5px double #3A6028;
   box-shadow: 10px 10px 5px #888888;
@@ -81,6 +94,7 @@ p {
   display: block;
   margin: auto;
   width: 60%;
+  margin-bottom: 500px;
 }
 
 .style_image4 {
@@ -92,4 +106,35 @@ p {
   display: block;
   margin: 20px 20px 20px 20px;
   // width: 40%;
+}
+ .precios {
+   body{
+     background-image:image-url('precios.png');
+   }
+
+   // background-size: 100% auto;
+   // background-position: 0 0px;
+   // // background-repeat: repeat-x;
+   // // background: linear-gradient(blue, pink);
+   // background-color: transparent;
+   // // background:rgba(199,199,199,1);
+   // margin-top: 51px;
+   // padding-left: 200px;
+   // padding-right: 200px;
+   // border-top: 200px;
+   // background-image:image-url('precios.png');
+   // background-position: 0 0px;
+   // background-size: 100% auto;
+ }
+
+.table2{
+  th {
+    background-color:rgba(66, 203, 244, 0.9);
+
+  }
+
+  tr {
+    background-color: lightblue;
+    opacity: 0.8;
+  }
 }
