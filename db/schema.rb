@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180604083602) do
+ActiveRecord::Schema.define(version: 20180616082205) do
 
   create_table "cuestionarios", force: :cascade do |t|
     t.string "nombre"
@@ -283,7 +283,7 @@ ActiveRecord::Schema.define(version: 20180604083602) do
     t.string "agua"
     t.string "verdura"
     t.string "ensalada"
-    t.integer "tick"
+    t.string "tick"
     t.boolean "pecho"
     t.boolean "dieta_sana"
     t.integer "motivacion"
