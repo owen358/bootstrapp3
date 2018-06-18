@@ -79,8 +79,14 @@
 </p><br>
 
 <p>
-  <strong>Limitesde alcanzar sus metas de salud:</strong>
-  <%= @formulario.limites %>
+  <strong>Limites de alcanzar sus metas de salud:</strong><br>
+
+        <% @formulario.limites[1..-1].each do |element| %>
+          <%= @limites[element.to_i] %><br>
+        <% end %>
+
+
+
 </p>
 <p>
   <strong>Otro:</strong>
@@ -270,8 +276,12 @@
       <tbody>
 </table>
 <p>
-  <strong>Activa:</strong>
-  <%= @formulario.activa %>
+  FACTORES-ESTILO DE VIDA<br>
+  <strong>Te consideras una persona:</strong><br>
+
+        <% @formulario.activa[1..-1].each do |element| %>
+          <%= @activa[element.to_i] %><br>
+        <% end %>
 </p><br>
 
 
@@ -333,8 +343,11 @@ TOBACCO & ALCOL<br><br>
 </p>
 
 <p>
-  <strong>Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en el espacio abajo: Alergia1:</strong>
-  <%= @formulario.alergia1 %>
+  <strong>Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en el espacio abajo:</strong><br>
+  orig array:<%= @formulario.alergia1 %><br>
+  <% @formulario.alergia1[1..-1].each do |element| %>
+    <%= @alergia1_options[element.to_i] %><br>
+  <% end %>
 </p>
 
 <p>
@@ -437,8 +450,12 @@ TOBACCO & ALCOL<br><br>
 
 
 <p>
-  <strong>Pon un tic en las Casillas si son aplicables en tu caso:</strong>
-  <%= @formulario.tick %>
+  <strong>Pon un tic en las Casillas si son aplicables en tu caso:</strong><br>
+<br>
+  <% @formulario.tick[1..-1].each do |element| %>
+    <%= @tick_options[element.to_i-1] %><br>
+      <% end %>
+
 </p>
 
 <p>
