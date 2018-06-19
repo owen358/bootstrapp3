@@ -80,13 +80,14 @@
 
 <p>
   <strong>Limites de alcanzar sus metas de salud:</strong><br>
-
+<% unless @formulario.limites==[] %>
         <% @formulario.limites[1..-1].each do |element| %>
           <%= @limites[element.to_i] %><br>
         <% end %>
+        <% end %>
 
 
-
+<br>
 </p>
 <p>
   <strong>Otro:</strong>
@@ -278,9 +279,10 @@
 <p>
   FACTORES-ESTILO DE VIDA<br>
   <strong>Te consideras una persona:</strong><br>
-
+<% unless @formulario.activa==[] %>
         <% @formulario.activa[1..-1].each do |element| %>
           <%= @activa[element.to_i] %><br>
+        <% end %>
         <% end %>
 </p><br>
 
@@ -344,12 +346,14 @@ TOBACCO & ALCOL<br><br>
 
 <p>
   <strong>Pon un tic en las Casillas si son aplicables en tu caso, y poner mas detalles en el espacio abajo:</strong><br>
-  orig array:<%= @formulario.alergia1 %><br>
+
+  <% unless @formulario.alergia1==[] %>
   <% @formulario.alergia1[1..-1].each do |element| %>
     <%= @alergia1_options[element.to_i] %><br>
   <% end %>
+    <% end %>
 </p>
-
+<br>
 <p>
   <strong>Proporciona mas detalles y enumera cualquier alimento o producto químico que te podría provocar una reacción:</strong>
   <%= @formulario.alergia2 %>
@@ -452,8 +456,10 @@ TOBACCO & ALCOL<br><br>
 <p>
   <strong>Pon un tic en las Casillas si son aplicables en tu caso:</strong><br>
 <br>
+  <% unless @formulario.tick==[] %>
   <% @formulario.tick[1..-1].each do |element| %>
     <%= @tick_options[element.to_i-1] %><br>
+      <% end %>
       <% end %>
 
 </p>
