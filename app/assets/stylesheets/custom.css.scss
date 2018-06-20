@@ -39,6 +39,23 @@ main {
  margin-bottom: 50px;
  color: lightblue;
 }
+
+.navbar-inverse {
+  // background-color: #333;
+  background: linear-gradient(to right, blue, pink);
+  border-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a  {
+  color: #efeef3;
+  font-family: 'Tillana', cursive;
+  font-size: 20px;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #3d75ce;
+}
+
 h1 {
   // font-family: 'Architects Daughter';
   // font-family: 'Tillana', cursive;
