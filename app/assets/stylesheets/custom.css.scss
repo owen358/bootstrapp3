@@ -108,7 +108,7 @@ h1 {
   // font-family: 'Architects Daughter';
   // font-family: 'Tillana', cursive;
   font-family: 'Patrick Hand';
-  color: #82a97c;
+  color: #65a7b7;
   // margin-top: 130px;
 }
 
@@ -210,17 +210,16 @@ p {
    // background-size: 100% auto;
  }
 
-.table2{
-  th {
-    background-color:rgba(66, 203, 244, 0.9);
 
-  }
 
-  tr {
-    background-color: lightblue;
-    opacity: 0.8;
+.table{
+  td, tr {
+    font-family: 'Patrick Hand';
+    font-size: 20px
   }
 }
+
+
 
 .carousel-inner {
   width: 50%;
