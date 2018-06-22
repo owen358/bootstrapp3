@@ -88,9 +88,9 @@ main {
 
 h1 {
   // font-family: 'Architects Daughter';
-  font-family: 'Tillana', cursive;
+  // font-family: 'Tillana', cursive;
     // font-family: 'Great Vibes', cursive;
-    // font-family: 'Patrick Hand';
+    font-family: 'Patrick Hand';
   // color: #5bc0de;
   // color: #5bc0de;
   color: #65a7b7;
@@ -108,26 +108,28 @@ h1 {
 
 .home-subtitle {
   // font-family: 'Architects Daughter';
-  font-family: 'Tillana', cursive;
-  // font-family: 'Patrick Hand';
+  // font-family: 'Tillana', cursive;
+  font-family: 'Patrick Hand';
   color: #65a7b7;
   // margin-top: 130px;
 }
 
 h2 {
   // font-family: 'Architects Daughter';
-  font-family: 'Tillana', cursive;
-  // font-family: 'Patrick Hand';
+  // font-family: 'Tillana', cursive;
+  font-family: 'Patrick Hand';
   // color: #5bc0de;
   color: #65a7b7;
   // margin-top: 130px;
 }
 
 p {
-  font-family: 'Tillana', cursive;
+  // font-family: 'Tillana', cursive;
   // font-family: 'Architects Daughter';
   // font-family: 'Forum';
-  // font-family: 'Patrick Hand';
+  font-family: 'Patrick Hand';
+  // font-family: 'Alegreya Sans', sans-serif;
+  // font-family: 'Crimson Text', serif;
   font-size: 20px;
   color: grey;
 }
@@ -217,8 +219,7 @@ p {
 
 .table{
   td, tr {
-    // font-family: 'Patrick Hand';
-      font-family: 'Tillana', cursive;
+    font-family: 'Patrick Hand';
     font-size: 20px
   }
 }
