@@ -1,3 +1,5 @@
+<% provide(:quote, '' )%>
+
 <%= render :partial => "layouts/carousel" %>
 
 <h1 class="home-title"><b>Servicios de Nutrición Clínica y Terapia Nutricional,
@@ -10,6 +12,9 @@
 <br><br><br><br>
 
 <br><br>
-<%= link_to 'https://www.ifm.org/' do %>
+<!-- <%= link_to (image_tag 'functional-med.png', class:"nutricion"), 'https://www.ifm.org/' %> -->
+<%= link_to image_tag('functional-med.png', class:"nutricion"), 'https://www.ifm.org/' %>
+
+<!-- <%= link_to 'https://www.ifm.org/' do %>
   <%= image_tag 'functional-med.png', class:"nutricion" %>
-<% end %>
+<% end %> -->

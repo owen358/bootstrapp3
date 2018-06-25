@@ -17,9 +17,12 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+    <div class="quote"><%= yield :quote %></div>
     <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
+
     </main>
+
   </body>
 </html>
