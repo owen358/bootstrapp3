@@ -34,7 +34,7 @@ img {
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
-  @extend .container;
+  @extend .container-fluid;
   background-color: #eee;
   padding-bottom: 80px;
   padding-left: 80px;
