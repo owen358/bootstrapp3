@@ -1,5 +1,12 @@
 <h1>Acceso</h1>
 
+<p>Para consultas de terapia nutricional, hay que rellenar el cuestionario de salud 24 horas antes de acudir a la primera cita.
+
+Introduce tu email y una contraseña para poder acceder al cuestionario.</p>
+
+<p>Registrarse…</p>
+
+
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email, required: false, autofocus: true %>

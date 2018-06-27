@@ -1,17 +1,19 @@
-<h2>Sign up</h2>
+<h1>Registrarse</h1>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-    <%= f.input :password_confirmation, required: true %>
+    <%= f.input :password, label: 'Contraseña', required: true, hint: ("#{@minimum_password_length} carácteres minimo" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, label: 'Contraseña confirmación', required: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Registrarse" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<br><br><br><br><br><br><br><br>
