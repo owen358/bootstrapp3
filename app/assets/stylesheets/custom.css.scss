@@ -258,12 +258,13 @@ p {
 .quote1 {
   font-family: 'Patrick Hand';
   font-size: 40px;
-  float: right;
-  width: 300px;
-  margin-right: 100px;
+  // float: right;
+  width: auto;
+  // margin-right: 10px;
+  margin: auto;
   text-align: center;
   color: #65a7b7;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
   // margin-bottom: 100px;
 }
 
@@ -311,4 +312,8 @@ p {
   text-align: center;
 
   // margin-right: 600px;
+}
+
+.navbar-collapse.in {
+  background-color: white
 }
