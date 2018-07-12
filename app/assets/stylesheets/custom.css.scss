@@ -74,6 +74,9 @@ background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), 
     }
 }
 
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #65a7b7;
+}
 
 main {
   background-image:image-url('gotita-flip2.png');
