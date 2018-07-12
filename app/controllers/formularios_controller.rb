@@ -79,7 +79,7 @@ class FormulariosController < ApplicationController
 
     respond_to do |format|
       if @formulario.save
-        format.html { redirect_to @formulario, notice: 'Formulario was successfully created.' }
+        format.html { redirect_to @formulario, notice: 'Formulario fue creado con éxito.' }
         format.json { render :show, status: :created, location: @formulario }
       else
         format.html { render :new }
@@ -93,7 +93,7 @@ class FormulariosController < ApplicationController
   def update
     respond_to do |format|
       if @formulario.update(formulario_params)
-        format.html { redirect_to @formulario, notice: 'Formulario was successfully updated.' }
+        format.html { redirect_to @formulario, notice: 'Formulario se actualizó con éxito.' }
         format.json { render :show, status: :ok, location: @formulario }
       else
         format.html { render :edit }
@@ -107,7 +107,7 @@ class FormulariosController < ApplicationController
   def destroy
     @formulario.destroy
     respond_to do |format|
-      format.html { redirect_to formularios_url, notice: 'Formulario was successfully destroyed.' }
+      format.html { redirect_to formularios_url, notice: 'Formulario fue destruido con éxito.' }
       format.json { head :no_content }
     end
   end

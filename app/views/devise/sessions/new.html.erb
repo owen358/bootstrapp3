@@ -4,7 +4,7 @@
 
 Introduce tu email y una contraseña para poder acceder al cuestionario.</p>
 
-<p>Registrarse…</p>
+<p>  <%= link_to "Registrarse...", new_registration_path(resource_name) %><br /></p>
 
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
