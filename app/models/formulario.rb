@@ -4,4 +4,7 @@ class Formulario < ApplicationRecord
   serialize :alergia1, Array
   serialize :limites, Array
   serialize :activa, Array
+
+
+
 end

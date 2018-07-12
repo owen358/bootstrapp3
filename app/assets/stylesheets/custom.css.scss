@@ -18,25 +18,13 @@ background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), 
   // background: linear-gradient(blue, pink);
   // background:rgba(0,0,0,0);
 }
-//
-// @media (min-width: 1200px){
-// .container, main {
-//     width: 1170px;
-// }
-// }
-// @media (min-width: 768px) and (max-width: 1200px) {
-//    .navbar-collapse.collapse {
-//        display: none !important;
-//    }
-// }
 
-// @media (min-width: 1200px) {
-//   /* line 193, C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_navbar.scss */
-//   .navbar-toggle {
-//     display: none;
-//   }
-// }
 
+.alert-success, .alert-danger {
+    margin-top: 51px;
+
+}
+// below changes breakpoint of nav and mobile nav to 1200px to avoid navbar going onto 2 lines on ipad etc
 @media (max-width: 1200px) {
     .navbar-header {
         float: none;

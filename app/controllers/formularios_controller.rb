@@ -60,6 +60,7 @@ class FormulariosController < ApplicationController
                   ['Activa', '1'],
                   ['Moderadamente activa', '2'],
                   ['Sedentario', '3']]
+
   end
 
   # GET /formularios/new
