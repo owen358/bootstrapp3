@@ -12,6 +12,7 @@ background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), 
 
 }
 
+
 .container2 {
   margin: 0px;
   background-color: transparent;
@@ -24,43 +25,62 @@ background: linear-gradient(to right, rgba(185,185,185,1), rgba(197,197,197,1), 
     margin-top: 51px;
 
 }
-// below changes breakpoint of nav and mobile nav to 1200px to avoid navbar going onto 2 lines on ipad etc
-@media (max-width: 1200px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
+
+// to stop overflow of nav to 2nd line change all padding l and r to minimum possible
+.navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
+.nav > li > a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 12px;
+}
+
+.container, main {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+// below changes breakpoint of nav and mobile nav to 1200px to avoid navbar going onto 2 lines on ipad etc
+// @media (max-width: 1200px) {
+//     .navbar-header {
+//         float: none;
+//     }
+//     .navbar-left,.navbar-right {
+//         float: none !important;
+//     }
+//     .navbar-toggle {
+//         display: block;
+//     }
+//     .navbar-collapse {
+//         border-top: 1px solid transparent;
+//         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+//     }
+//     .navbar-fixed-top {
+//         top: 0;
+//         border-width: 0 0 1px;
+//     }
+//     .navbar-collapse.collapse {
+//         display: none!important;
+//     }
+//     .navbar-nav {
+//         float: none!important;
+//         margin-top: 7.5px;
+//     }
+//     .navbar-nav>li {
+//         float: none;
+//     }
+//     .navbar-nav>li>a {
+//         padding-top: 10px;
+//         padding-bottom: 10px;
+//     }
+//     .collapse.in{
+//         display:block !important;
+//     }
+// }
 
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #65a7b7;
@@ -79,6 +99,7 @@ main {
   padding-left: 10%;
   padding-right: 10%;
   border-top: 200px;
+  overflow-x: scroll;
 }
 
 // .container, main {
@@ -163,6 +184,7 @@ h1 {
   font-family: 'Patrick Hand';
   color: #65a7b7;
   // margin-top: 130px;
+    text-align: center;
 }
 
 h2 {
