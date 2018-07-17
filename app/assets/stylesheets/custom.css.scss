@@ -113,7 +113,10 @@ main {
   padding-left: 20px;
 }
 
-
+.navbar-collapse.in {
+    background-color: white;
+    height: 600px;
+}
 
 .navbar {
  margin-bottom: 50px;
@@ -462,7 +465,7 @@ p {
 .navbar-collapse.in {
   background-color: white
 }
-
+//float portman pic left and push beneficios down
 @media (min-width: 629px) and (max-width: 947px){
 .bullets {
     text-align: left;
